@@ -214,15 +214,4 @@ public class Main {
 
 
 
-    List<WebElement> searchResults = driver.findElements(By.cssSelector("h3")); // Tìm tất cả các tiêu đề kết quả tìm kiếm
-
-    // git demo
-                for (WebElement result : searchResults) {
-        // Kiểm tra nếu kết quả chứa URL hoặc tiêu đề mà bạn muốn nhấp vào
-        if (result.getText().contains("Trang chủ - Upviral - Phần mềm chat đa kênh")) {
-            result.click(); // Nhấp vào liên kết đó
-            System.out.println("Đã nhấp vào kết quả mong muốn.");
-            break;
-        }
-    }
 }
