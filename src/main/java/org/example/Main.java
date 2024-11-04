@@ -70,9 +70,9 @@ public class Main {
             // Khởi tạo Selenium WebDriver
             // Tạo tùy chọn cho Chrome
             ChromeOptions options = new ChromeOptions();
-            options.setProxy(proxy);
-            options.addArguments("--headless");  // Chạy không giao diện
-            options.addArguments("--window-size=1920,1080");  // Cấu hình kích thước cửa sổ giả lập
+//            options.setProxy(proxy);
+//            options.addArguments("--headless");  // Chạy không giao diện
+//            options.addArguments("--window-size=1920,1080");  // Cấu hình kích thước cửa sổ giả lập
             options.addArguments("--remote-allow-origins=*"); // Cho phép mọi nguồn gốc từ xa
 //            options.addArguments("--disable-web-security");   // Vô hiệu hóa bảo mật web (chỉ dùng cho phát triển)
 //            options.addArguments("--no-sandbox");             // Tắt sandbox của Chrome
@@ -87,7 +87,7 @@ public class Main {
 
 
             for (int i = 0; i < 50; i++) {
-                driver.get("https://muaproxyvietnam.com/api/proxy-v2/rotating/change-ip/badff849-37a7-41bf-98b3-ed5ce99083e8");
+//                driver.get("https://muaproxyvietnam.com/api/proxy-v2/rotating/change-ip/badff849-37a7-41bf-98b3-ed5ce99083e8");
                 System.out.println("Truy cập lần thứ " + (i + 1));
                 int randomScrollTime = random.nextInt(45) + 45;
                 // Mở trang web
@@ -209,6 +209,20 @@ public class Main {
 //            driver.quit();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+
+
+    List<WebElement> searchResults = driver.findElements(By.cssSelector("h3")); // Tìm tất cả các tiêu đề kết quả tìm kiếm
+
+    // git demo
+                for (WebElement result : searchResults) {
+        // Kiểm tra nếu kết quả chứa URL hoặc tiêu đề mà bạn muốn nhấp vào
+        if (result.getText().contains("Trang chủ - Upviral - Phần mềm chat đa kênh")) {
+            result.click(); // Nhấp vào liên kết đó
+            System.out.println("Đã nhấp vào kết quả mong muốn.");
+            break;
         }
     }
 }
