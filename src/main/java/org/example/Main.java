@@ -122,7 +122,7 @@ public class  Main {
 //                searchMap.put("cách gắn link affiliate shopee trên tiktok", "Cách Làm Affiliate Shopee Trên TikTok Cho Người Mới Bắt Đầu");
                 searchMap.put("cài đặt tin nhắn tự động trên shopee", "Cách Cài Đặt Tin Nhắn Tự Động Trên Shopee Đơn Giản");
                 searchMap.put("tin nhắn tự động shopee", "Cách Cài Đặt Tin Nhắn Tự Động Trên Shopee Đơn Giản");
-
+searchMap.put("nham","oke");
                 ///
 //                searchMap.put("xóa tin nhắn facebook hàng loạt", "Hướng Dẫn Cách Xóa Tin Nhắn Facebook Hàng Loạt Chỉ Với");
                 searchMap.put("cách rải link affiliate shopee hiệu quả", "5 Cách rải link Affiliate Shopee hiệu quả, kiếm tiền cực dễ");
